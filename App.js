@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ResizeMode, Video } from "expo-av";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Video
+        source={{
+          uri: "https://stream.mux.com/6nzoY44d6bc4pFhnWRlV900JNUszh00UgdikHcLwkvPJQ.m3u8",
+        }}
+        useNativeControls
+        style={{ flexGrow: 1, backgroundColor: "red" }}
+      />
     </View>
   );
 }
@@ -13,8 +18,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "red",
   },
 });
