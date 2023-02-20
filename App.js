@@ -9,6 +9,7 @@ export default function App() {
           uri: "https://stream.mux.com/6nzoY44d6bc4pFhnWRlV900JNUszh00UgdikHcLwkvPJQ.m3u8",
         }}
         useNativeControls
+        shouldPlay
         style={{ flexGrow: 1, backgroundColor: "red" }}
       />
     </View>
